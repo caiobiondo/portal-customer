@@ -1,0 +1,30 @@
+<div class="perfil-permissoes-list">
+  <div class="flexRow justify-between mb-5">
+    <div class="perfil-permissoes-title">
+      <span class="perfil-permissoes-list-span mr-3"> >> Lista de Colaboradores</span>
+      <button (click)="openUrl('admin/perfil-personalizado')" class="perfil-permissoes-list-btn">+ Criar Perfil Personalizado</button>
+    </div>
+  </div>
+  <div>
+    <p-table [value]="users">
+      <ng-template pTemplate="header">
+          <tr>
+              <th pSortableColumn="code">Code <p-sortIcon field="code"></p-sortIcon></th>
+              <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+              <th pSortableColumn="category">Category <p-sortIcon field="category"></p-sortIcon></th>
+              <th pSortableColumn="quantity">Quantity <p-sortIcon field="quantity"></p-sortIcon></th>
+              <th pSortableColumn="price">Price <p-sortIcon field="price"></p-sortIcon></th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-user>
+          <tr>
+              <td>{{user.code}}</td>
+              <td>{{user.name}}</td>
+              <td>{{user.category}}</td>
+              <td>{{user.quantity}}</td>
+              <td>{{user.price | currency: 'USD'}}</td>
+          </tr>
+      </ng-template>
+  </p-table>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.textSend {
+  text-align: center;
+  padding: 5%;
+}
+.textSend p {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 5%;
+}

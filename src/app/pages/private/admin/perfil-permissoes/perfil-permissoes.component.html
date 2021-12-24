@@ -1,0 +1,255 @@
+<div class="perfil-permissao">
+  <div class="flexRow justify-between mb-5">
+    <div class="flexRow aligh-center perfil-permissao-title">
+      <span class="perfil-permissao-span"> >> Perfil de Acessos</span>
+      <div>
+        <span class="mr15px">Empresa</span>
+        <select class="perfil-permissao-select" (change)="onCnpj($event)">
+          <option value=""></option>
+          <option [value]="cnpj" *ngFor="let cnpj of cnpjs">{{cnpj}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="mr-3">
+      <button (click)="openUrl('admin/perfil-personalizado')" class="perfil-permissao-btn">+ Criar Perfil Personalizado</button>
+    </div>
+  </div>
+
+  <div class="flexRow ">
+    <div class="flexCol mr-2 mb-5">
+      <div class="perfil-permissao-card" (click)="openCard('isAdministracao')" [ngClass]="isAdministracao == true ? 'card-radius-open' : 'card-radius-close'">
+        <span> >> Administração <i *ngIf="isAdministracao == true" (click)="openUrl('admin/perfil-personalizado/cnpj/admin')" class="fas fa-pen cursor-pointer"></i></span> <span><i class="fas " [ngClass]="isAdministracao == true ? 'fa-chevron-up' : 'fa-chevron-down'" ></i></span>
+      </div>
+      <div *ngIf="isAdministracao == true" [@fadeInOut] class="perfil-permissao-card2">
+        <div>
+          <p class="card-title">Cadastro</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Usuário</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Modelo de Perfil</div>
+          </div>
+
+          <p class="card-title">Folha de Pagamento</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Enviar Folha de Pagamento</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar Folha de Pagamento</div>
+          </div>
+
+          <p class="card-title">Solicitações</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Abrir solicitações</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar solicitações</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flexCol mr-2 mb-5">
+      <div class="flexRow perfil-permissao-card " (click)="openCard('isGerenciamento')" [ngClass]="isGerenciamento == true ? 'card-radius-open' : 'card-radius-close'">
+        <span> >> Gerenciamento</span> <span><i class="fas " [ngClass]="isGerenciamento == true ? 'fa-chevron-up' : 'fa-chevron-down'" ></i></span>
+      </div>
+      <div *ngIf="isGerenciamento == true" [@fadeInOut] class="perfil-permissao-card2">
+        <div>
+          <p class="card-title">Cadastro</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Usuário</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Modelo de Perfil</div>
+          </div>
+
+          <p class="card-title">Folha de Pagamento</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Enviar Folha de Pagamento</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar Folha de Pagamento</div>
+          </div>
+
+          <p class="card-title">Solicitações</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Abrir solicitações</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar solicitações</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flexCol mr-2 mb-5">
+      <div class="flexRow perfil-permissao-card" (click)="openCard('isColaborativo')" [ngClass]="isColaborativo == true ? 'card-radius-open' : 'card-radius-close'">
+        <span> >> Colaborativo</span> <span><i class="fas " [ngClass]="isColaborativo == true ? 'fa-chevron-up' : 'fa-chevron-down'"></i></span>
+      </div>
+      <div *ngIf="isColaborativo == true" [@fadeInOut] class="perfil-permissao-card2">
+        <div>
+          <p class="card-title">Cadastro</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Usuário</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Modelo de Perfil</div>
+          </div>
+
+          <p class="card-title">Folha de Pagamento</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Enviar Folha de Pagamento</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar Folha de Pagamento</div>
+          </div>
+
+          <p class="card-title">Solicitações</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Abrir solicitações</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar solicitações</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flexCol mr-2 mb-5">
+      <div class="flexRow perfil-permissao-card" (click)="openCard('isAnalistaFiscal')" [ngClass]="isAnalistaFiscal == true ? 'card-radius-open' : 'card-radius-close'">
+        <span> >> Analista Fiscal</span> <span><i class="fas " [ngClass]="isAnalistaFiscal == true ? 'fa-chevron-up' : 'fa-chevron-down'"></i></span>
+      </div>
+      <div *ngIf="isAnalistaFiscal == true" [@fadeInOut] class="perfil-permissao-card2">
+        <div>
+          <p class="card-title">Cadastro</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Usuário</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Modelo de Perfil</div>
+          </div>
+
+          <p class="card-title">Folha de Pagamento</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Enviar Folha de Pagamento</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar Folha de Pagamento</div>
+          </div>
+
+          <p class="card-title">Solicitações</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Abrir solicitações</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar solicitações</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flexCol mr-2 mb-5">
+      <div class="flexRow perfil-permissao-card" (click)="openCard('isAnalistaRh')" [ngClass]="isAnalistaRh == true ? 'card-radius-open' : 'card-radius-close'">
+        <span> >> Analista RH</span> <span><i class="fas " [ngClass]="isAnalistaRh == true ? 'fa-chevron-up' : 'fa-chevron-down'"></i></span>
+      </div>
+      <div *ngIf="isAnalistaRh == true" [@fadeInOut] class="perfil-permissao-card2">
+        <div>
+          <p class="card-title">Cadastro</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Usuário</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Modelo de Perfil</div>
+          </div>
+
+          <p class="card-title">Folha de Pagamento</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Enviar Folha de Pagamento</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar Folha de Pagamento</div>
+          </div>
+
+          <p class="card-title">Solicitações</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Abrir solicitações</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar solicitações</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flexCol mr-2 mb-5">
+      <div class="flexRow perfil-permissao-card" (click)="openCard('isEstagiario')" [ngClass]="isEstagiario == true ? 'card-radius-open' : 'card-radius-close'">
+        <span> >> Estagiário</span> <span><i class="fas " [ngClass]="isEstagiario == true ? 'fa-chevron-up' : 'fa-chevron-down'"></i></span>
+      </div>
+      <div *ngIf="isEstagiario == true" [@fadeInOut] class="perfil-permissao-card2">
+        <div>
+          <p class="card-title">Cadastro</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Usuário</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Modelo de Perfil</div>
+          </div>
+
+          <p class="card-title">Folha de Pagamento</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Enviar Folha de Pagamento</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar Folha de Pagamento</div>
+          </div>
+
+          <p class="card-title">Solicitações</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Abrir solicitações</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar solicitações</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,133 @@
+<div class="perfil-personalizado">
+  <div class="flexRow mb-5">
+    <div class="flexRow aligh-center perfil-personalizado-title">
+      <span class="perfil-personalizado-span"> >> Perfil Personalizado</span>
+    </div>
+  </div>
+
+  <form [formGroup]="perfilPersonalizadoForm" (ngSubmit)="save()">
+    <div class="perfil-personalizado-card card-radius-open">
+      >> <input class="mr15px" formControlName="nomePerfilPersonalizado"> <span><i class="fas fa-pen"></i></span>
+    </div>
+    <div class="perfil-personalizado-card2">
+      <div class="flexRow justify-between aligh-center">
+        <div class="flexRow">
+          <div>
+            <span class="mr15px">Grupo</span>
+            <select class="perfil-personalizado-select mr15px" >
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <button class="perfil-personalizado-btn">Salvar</button>
+        </div>
+      </div>
+      <div class="flexRow justify-between">
+
+        <div>
+          <!-- <p class="card-title">Cadastro</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Usuário</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Cadastro de Modelo de Perfil</div>
+          </div> -->
+
+          <p class="card-title">Folha de Pagamento</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Enviar Folha de Pagamento</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar Folha de Pagamento</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Baixar Folha de Pagamento</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Preencher Folha de Pagamento</div>
+          </div>
+        </div>
+
+        <div>
+          <p class="card-title">Solicitações</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Abrir solicitações</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Visualizar solicitações</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">TI</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Fiscal</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Contábil</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Recursos Humanos</div>
+          </div>
+        </div>
+
+        <div>
+          <p class="card-title">Ferramenta 1</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Setor 1</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Setor 2</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Setor 3</div>
+          </div>
+        </div>
+
+        <div>
+          <p class="card-title">Ferramenta 2</p>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Função 1</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Função 2</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Função 3</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Setor 1</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Setor 2</div>
+          </div>
+          <div class="flexRow aligh-center">
+            <p-inputSwitch class="mr15px"></p-inputSwitch>
+            <div class="textColorGray">Setor 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>
